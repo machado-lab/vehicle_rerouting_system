@@ -1,0 +1,38 @@
+vehicle_rank <- function(scored_vehicle){
+  
+  scored_vehicle <- scored_vehicle %>%
+    mutate(time_to_request_farm = round(time_to_request_farm)) %>%
+    group_by(score) %>%
+    arrange(desc(score), desc(time_to_request_farm))
+  
+  scored_vehicle$rank <- NA
+  rank <- 0
+  for (i in 1:nrow(scored_vehicle)) {
+    # i <- 2
+    rank  <- rank + 1
+    
+    if(i == 1){
+      
+      scored_vehicle$rank[i] <- rank
+      
+    } else {
+      
+      if(scored_vehicle$time_to_request_farm[i] == scored_vehicle$time_to_request_farm[i-1] &
+         scored_vehicle$score[i] == scored_vehicle$score[i-1] &
+         !is.na(scored_vehicle$time_to_request_farm[i])){
+        
+        rank <- scored_vehicle$rank[i-1]
+        scored_vehicle$rank[i] <- rank
+        
+      } else {
+        
+        scored_vehicle$rank[i] <- rank
+        
+      }
+      
+      
+    }
+    
+  }
+  
+}
