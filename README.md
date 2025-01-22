@@ -35,7 +35,7 @@ The scoring system evaluates vehicles based on the following factors:
 - A data frame containing all possible combinations of the above variables, with corresponding scores.
 - If export = TRUE, a CSV file (var_combinations.csv) containing the data frame is saved in the working directory. [Example](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/data/Vehicles%E2%80%99%20rules%20and%20scores.csv)
 
-# Vehicle_score.R
+# vehicle_score.R
 The vehicle_score function assigns scores to observed vehicles based on a predefined scoring template. It combines the observed vehicle data with the scoring criteria, generating a scored table that reflects vehicle suitability for shipments while considering various risk factors.
 
 [vehicle_score Function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/vehicle_score.R)
