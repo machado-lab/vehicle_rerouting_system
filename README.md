@@ -4,6 +4,8 @@ Codes for calculating the vehicles' scores and rankings for rerouting purposes.
 # score_template.R
 The score_template function generates a scoring system for vehicles used in livestock transport, accounting for various risk factors associated with disease transmission. It creates a comprehensive ranking of vehicles based on their status, interactions with infected farms, and network measures, which can be exported for further analysis.
 
+- [score_template Function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/score_template.R)
+
 ## Function Description
 ### Parameters:
 - prrs_limit: Time frame (in days) to check the PRRSV status of farms (e.g., 364 days).
