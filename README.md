@@ -4,7 +4,7 @@ Codes for calculating the vehicles' scores and rankings for rerouting purposes.
 # score_template.R
 The score_template function generates a scoring system for vehicles used in livestock transport, accounting for various risk factors associated with disease transmission. It creates a comprehensive ranking of vehicles based on their status, interactions with infected farms, and network measures, which can be exported for further analysis.
 
-- [score_template function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/score_template.R)
+- [score template function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/score_template.R)
 
 ## Function Description
 ### Parameters:
@@ -38,7 +38,7 @@ The scoring system evaluates vehicles based on the following factors:
 # vehicle_score.R
 The vehicle_score function assigns scores to observed vehicles based on a predefined scoring template. It combines the observed vehicle data with the scoring criteria, generating a scored table that reflects vehicle suitability for shipments while considering various risk factors.
 
-[vehicle_score function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/vehicle_score.R)
+[vehicle score function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/vehicle_score.R)
 
 ## Function Description
 ### Parameters:
@@ -51,7 +51,7 @@ scored_vehicle_table: A data frame of the observed vehicle data with an addition
 # vehicle_rank.R
 The vehicle_rank function assigns ranks to vehicles based on their scores and their time to the request farm, prioritizing vehicles for shipment scheduling. The ranking is determined by descending score and descending proximity (rounded time to the request farm). Vehicles with identical scores and times are assigned the same rank.
 
-- [vehicle_rank function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/vehicle_rank)
+- [vehicle rank function](https://github.com/machado-lab/vehicle_rerouting_system/blob/main/code/vehicle_rank)
 
 ## Function Description
 ### Parameters:
